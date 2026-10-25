@@ -132,8 +132,7 @@ with tabs[0]:
     fig.add_trace(go.Scatter(x=aoa_sweep, y=cd_sweep, name="Drag Coefficient (Cd)", yaxis="y2", line=dict(color="#ff7f0e", width=3)))
     fig.add_vline(x=aoa, line_dash="dash", line_color="white", annotation_text="Your Selected Design Point")
 
-    fig.update_layout(
-        template="plotly_dark",
+    fig.update_layout(template="plotly_dark")
         height=450,
         title=f"Aerodynamic Response Curves at fixed Speed: {velocity:.1f} m/s",
         xaxis_title="Angle of Attack (deg)",
