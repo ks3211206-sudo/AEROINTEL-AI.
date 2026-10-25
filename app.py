@@ -50,9 +50,11 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-BASE = Path("/content")
+BASE = Path(__file__).resolve().parent
+
 CL_PATH = BASE / "AEROINTEL_Cl_Quadratic_RSM.pkl"
 CD_PATH = BASE / "AEROINTEL_Cd_Quadratic_RSM.pkl"
+
 DATA_PATH = BASE / "NACA 0012 Validation - Master DoE Matrix.csv"
 
 # Load artifacts
