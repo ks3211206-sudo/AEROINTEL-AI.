@@ -132,14 +132,12 @@ with tabs[0]:
     fig.add_vline(x=aoa, line_dash="dash", line_color="white", annotation_text="Your Selected Design Point")
 
     fig.update_layout(
-        template="plotly_dark",
-        height=450,
-        title=f"Aerodynamic Response Curves at fixed Speed: {velocity:.1f} m/s",
-        xaxis_title="Angle of Attack (deg)",
-        yaxis=dict(title="Lift Coefficient Cl", titlefont=dict(color="#1f77b4"), tickfont=dict(color="#1f77b4")),
-        yaxis2=dict(title="Drag Coefficient Cd", titlefont=dict(color="#ff7f0e"), tickfont=dict(color="#ff7f0e"), overlaying="y", side="right"),
-        legend=dict(x=0.01, y=0.99),
-        margin=dict(l=40, r=40, t=60, b=40)
+    template="plotly_dark",
+    title="Aerodynamic Coefficient Prediction",
+    xaxis_title="Angle of Attack (degrees)",
+    yaxis_title="Coefficient",
+    margin=dict(l=40, r=40, t=60, b=40),
+)
     )
     st.plotly_chart(fig, use_container_width=True)
 
